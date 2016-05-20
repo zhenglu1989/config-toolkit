@@ -57,7 +57,7 @@ public class VersionManagedBean implements IObserver, Serializable {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(VersionManagedBean.class);
 
-	private String selectedVersion;
+	private String selectedVersion = "1.0";
 	private List<String> versions;
 	private InputText versionToBeCreatedInput;
 	private InputText versionToCloneInput;
@@ -160,7 +160,7 @@ public class VersionManagedBean implements IObserver, Serializable {
 			versions = null;
 		}
 
-		selectedVersion = null;
+		selectedVersion = "1.0";
 	}
 
 	public final String getSelectedVersion() {

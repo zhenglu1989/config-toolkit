@@ -91,8 +91,8 @@
 						<p:outputLabel for="versionSelector" value="版本:" style="margin-right: 6px;font-size: medium;" />
 						<p:selectOneMenu id="versionSelector" value="#{versionMB.selectedVersion}" disabled="#{empty nodeAuthMB.authedNode}" style="font-size:small;vertical-align:middle;">
 							<p:ajax listener="#{propertyGroupMB.refreshGroup}" event="change" update="@(form)" />
-							<f:selectItem itemLabel="Select Version..." />
 							<f:selectItems value="#{versionMB.versions}" />
+							<f:selectItem itemLabel="Select Version..." />
 						</p:selectOneMenu>
 						<p:separator style="margin: 0px 5px 0px 5px;" />
 						<p:commandLink id="createVersionBt" type="button" value="新建版本" onclick="PF('createVersion').show()" style="font-size:small;margin-right:6px;"
@@ -107,7 +107,7 @@
 						<p:commandLink id="importAllBt" type="button" value="导入(ZIP)" style="font-size:small;margin-right:6px;"
 							disabled="#{empty nodeAuthMB.authedNode || empty versionMB.selectedVersion}" onclick="PF('uploadZip').show()" />
 						<!-- @Deprecated -->
-						<p:commandLink id="importAllOldBt" type="button" value="导入v2.x版本数据(ZIP)" style="font-size:small;margin-right:6px;"
+						<p:commandLink id="importAllOldBt" type="button" value="导入旧版数据(ZIP)" style="font-size:small;margin-right:6px;"
 							disabled="#{empty nodeAuthMB.authedNode || empty versionMB.selectedVersion}" onclick="PF('uploadZipOld').show()" />
 					</p:toolbarGroup>
 				</p:toolbar>
@@ -116,7 +116,7 @@
 			</h:form>
 		</p:layoutUnit>
 		<p:layoutUnit position="south" size="50" style="border:0px;">
-			<h:outputText value="Copyright (C) WangYuxuan@DangDang" />
+			<h:outputText value="小卡科技研发中心 @架构组" />
 		</p:layoutUnit>
 		<p:layoutUnit position="west" size="400" style="border:0px;top:85px;">
 			<h:form id="authedNodeForm">
